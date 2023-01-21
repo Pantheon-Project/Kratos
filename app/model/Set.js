@@ -14,14 +14,28 @@ export default class ExerciseSet {
    }
 
    static FromDict(set_dict) {
-      reps = parseInt(set_dict.reps)
-      this.reps = reps != NaN ? reps : 0
-      weight = parseInt(set_dict.weight)
-      this.weight = weight != NaN ? weight : 0
-      rpe = parseInt(set_dict.rpe)
-      this.rpe = rpe != NaN ? rpe : 0
-      rir = parseInt(set_dict.rir)
-      this.rir = rir != NaN ? rir : 0
+      // Do basic parse from the dict
+      reps   = parseInt(set_dict.reps);
+      weight = parseInt(set_dict.weight);
+      rpe    = parseInt(set_dict.rpe);
+      rir    = parseInt(set_dict.rir);
+      // If we got any nans, default to 0.
+      reps   = reps   != NaN ? reps : 0;
+      weight = weight != NaN ? weight : 0;
+      rpe    = rpe    != NaN ? rpe : 0;
+      rir    = rir    != NaN ? rir : 0;
+      return ExerciseSet(reps, weight, RPE, RIR);
+   }
+
+   static FromJSON(set_json) {
+      try {
+         set_dict = JSON.parse(set_json);
+         return this.FromDict(set_dict);
+      }
+      catch (err) {
+         console.error(`Got error parsing JSON dict ${set_json}\nError Message: ${err.message}`);
+         return ExerciseSet(0,0,0,0);
+      }
    }
 
    get Repetitions() { return this.reps; }
