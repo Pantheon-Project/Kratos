@@ -1,4 +1,5 @@
 # Kratos
+
 A NativeScript app for creating and tracking Powerlifting (and other weight training) programs. Named for the Greek god of strength and power, not necessarily the video game character.
 
 ## App organization
@@ -50,5 +51,3 @@ The state affects how the class is displayed.
 For example, a planned workout shows up in the future schedule.
 An active workout is shown in the active workout view.
 A completed workout shows up in the history view or in the past schedule.
-
-Each 
