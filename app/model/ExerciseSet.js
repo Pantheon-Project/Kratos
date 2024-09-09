@@ -1,3 +1,5 @@
+import { Required } from "../utils";
+
 export default class ExerciseSet {
    /**
     * 
@@ -6,7 +8,7 @@ export default class ExerciseSet {
     * @param {number} RPE 
     * @param {number?} RIR 
     */
-   constructor(reps, weight, RPE, RIR=null) {
+   constructor(reps=Required("reps"), weight=Required("weight"), RPE=Required("RPE"), RIR=null) {
       this.reps = reps
       this.weight = weight;
       this.rpe = RPE;
