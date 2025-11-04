@@ -6,4 +6,5 @@ module.exports = {
     namespace: "foreign"
   },
   preprocess: [ sveltePreprocess(), svelteNativePreprocessor() ]
+  // preprocess: [ svelteNativePreprocessor() ]
 }

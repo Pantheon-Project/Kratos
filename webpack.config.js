@@ -16,7 +16,15 @@ env = {
 			// This is only needed if you use Svelte 5+ with TypeScript
 			{
 				test: /\.svelte\.ts$/,
-				use: ['ts-loader', 'svelte-loader']
+				use: [ "svelte-loader", { loader: "ts-loader", options: { transpileOnly: true } }],
+			},
+			// This is the config for other .ts files - the regex makes sure to not process .svelte.ts files
+			{
+				test: /(?<!\.svelte)\.ts$/,
+				loader: "ts-loader",
+				options: {
+					transpileOnly: true, // you should use svelte-check for type checking
+				}
 			},
 			{
 				// Svelte 5+:
