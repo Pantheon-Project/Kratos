@@ -2,14 +2,13 @@
 <script lang="ts">
    import { Template } from "svelte-native/components";
    
-   let message: string = "Kratos: Powerlifting Training";
-   /** @type object[] */
-   let programs = [];
-   let dones=[] //completed items go here
-   let textFieldValue = "";
+   let message        : string   = "Kratos: Powerlifting Training";
+   let programs       : object[] = [];
+   let dones          : object[] = [] //completed items go here
+   let textFieldValue : string   = "";
 
-   const removeFromList = (list, item) => list.filter(t => t !== item);
-   const addToList = (list, item) => [item, ...list] 
+   const removeFromList = (list:object[], item:object) => list.filter(t => t !== item);
+   const addToList      = (list:object[], item:object) => [item, ...list] 
    
    function onButtonTap() {
       if (textFieldValue === "") return; // Prevents users from entering an empty string.
@@ -18,7 +17,7 @@
       textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
    }
 
-   async function onItemTap(args) {
+   async function onItemTap(args:object) {
 		let result = await action("What do you want to do with this task?", "Cancel", [
 				"Mark completed",
 				"Delete forever"
