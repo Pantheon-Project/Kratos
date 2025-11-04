@@ -18,6 +18,7 @@
     "@nativescript/types": "~8.9.1",
     "@nativescript/webpack": "~5.0.24",
     "svelte": "~5.43.3",
+    "svelte-check": "^4.3.3",
     "svelte-loader": "^3.2.4",
     "svelte-native-preprocessor": "^1.0.0",
     "svelte-preprocess": "^6.0.3",
