@@ -74,17 +74,15 @@
       <gridLayout>
         <label class="info">
           <formattedString>
-            <span class="fas" text="&#xf135;" />
-            <span text=" {message}" />
+            <span class="fas" text="&#xf135;"></span>
+            <span text=" {message}"></span>
           </formattedString>
         </label>
       </gridLayout>
     </tabViewItem>
     <tabViewItem title="Programs">
       <gridLayout columns="*,120" rows="20,70,*">
-        <label colSpan="2" row="0" textWrap="true"
-          >This tab will list programs you've defined.</label
-        >
+        <label colSpan="2" row="0" textWrap="true">This tab will list programs you've defined.</label>
         <!-- Configures the text field and ensures that pressing Return on the keyboard
                produces the same result as tapping the button. -->
         <textField
@@ -93,15 +91,15 @@
           bind:text={textFieldValue}
           hint="Type new program name..."
           editable="true"
-          on:returnPress={onButtonTap}
-        />
+          on:returnPress={onButtonTap}>
+        </textField>
         <button
           col={1}
           row={1}
           class="-primary"
           text="Add program"
-          on:tap={onButtonTap}
-        />
+          on:tap={onButtonTap}>
+        </button>
 
         <listView items={programs} on:itemTap={onItemTap} row="2" colSpan="2">
           <Template let:item>
@@ -112,9 +110,7 @@
     </tabViewItem>
     <tabViewItem title="Schedule">
       <gridLayout columns="*,120" rows="20,*">
-        <label colSpan="2" row="0" textWrap="true"
-          >This tab will show you the workout schedule you've defined.</label
-        >
+        <label colSpan="2" row="0" textWrap="true">This tab will show you the workout schedule you've defined.</label>
 
         <listView items={programs} on:itemTap={onItemTap} row="2" colSpan="2">
           <Template let:item>
@@ -125,9 +121,7 @@
     </tabViewItem>
     <tabViewItem title="Completed">
       <gridLayout columns="*,120" rows="20,*">
-        <label colSpan="2" row="0" textWrap="true"
-          >This tab will list completed workouts.</label
-        >
+        <label colSpan="2" row="0" textWrap="true">This tab will list completed workouts.</label>
         <listView items={dones} on:itemTap={onDoneTap} row="2" colSpan="2">
           <Template let:item>
             <label
