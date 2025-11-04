@@ -7,10 +7,10 @@ env = {
 		alias: {
 			svelte: path.resolve('node_modules', 'svelte/src/runtime') // Svelte 3: path.resolve('node_modules', 'svelte')
 		},
-		extensions: ['.mjs', '.js', '.svelte'],
-			mainFields: ['svelte', 'browser', '...'],
-				conditionNames: ['svelte', 'browser', '...'],
-  },
+		extensions: ['.mjs', '.js', '.ts', '.tsx', '.svelte'],
+		mainFields: ['svelte', 'browser', '...'],
+		conditionNames: ['svelte', 'browser', '...'],
+	},
 	module: {
 		rules: [
 			// This is only needed if you use Svelte 5+ with TypeScript
