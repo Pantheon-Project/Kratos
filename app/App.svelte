@@ -1,3 +1,4 @@
+<svelte:options namespace="html"/>
 <frame>
     <Home />
 </frame>

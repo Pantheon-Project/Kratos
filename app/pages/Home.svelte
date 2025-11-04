@@ -1,3 +1,4 @@
+<svelte:options namespace="html"/>
 <script lang="ts">
    import { Template } from "svelte-native/components";
    
