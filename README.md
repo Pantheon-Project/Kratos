@@ -24,11 +24,11 @@ An `exercise` exists outside of `programs`, and is instead included in one or mo
 The app code is organized by a few high-level folders.
 Idea is to mostly fit into an MVC framework, with a couple extra bits:
 
-- `components/` : For general components not specific to a part of the app. A bit like base classes for view components.
+- `components/` : For generalized custom components used in the view. Like base classes for view elements.
 - `controller/` : For classes implementing the bulk of the logic for operations in the app.
 - `fonts/` : This came with the starter code, guess it's where font files go.
 - `model/` : For classes representing the underlying data models in the app. Mostly dumb structs.
-- `pages/` : For the different pages of the app, and navigation between them. Kind of like dumb structs wrapping view components together.
+- `pages/` : For the different pages of the app, and navigation between them. Like dumb structs wrapping view components together.
 - `view/` : For components that display models, and bind functionality from controllers.
 - `utils.js` : For random utility functions used across parts of the code.
 
