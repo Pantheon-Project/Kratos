@@ -1,6 +1,6 @@
 # Kratos
 
-A NativeScript app for creating and tracking Powerlifting (and other weight training) programs. Named for the Greek god of strength and power, not necessarily the video game character.
+A Flutter project for creating and tracking Powerlifting (and other weight training) programs. Named for the Greek god of strength and power, not necessarily the video game character.
 
 ## App organization
 
@@ -51,3 +51,17 @@ The state affects how the class is displayed.
 For example, a planned workout shows up in the future schedule.
 An active workout is shown in the active workout view.
 A completed workout shows up in the history view or in the past schedule.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
+- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
