@@ -1,6 +1,6 @@
 # Kratos
 
-A NativeScript app for creating and tracking Powerlifting (and other weight training) programs. Named for the Greek god of strength and power, not necessarily the video game character.
+A Flutter project for creating and tracking Powerlifting (and other weight training) programs. Named for the Greek god of strength and power, not necessarily the video game character.
 
 ## App organization
 
@@ -24,11 +24,11 @@ An `exercise` exists outside of `programs`, and is instead included in one or mo
 The app code is organized by a few high-level folders.
 Idea is to mostly fit into an MVC framework, with a couple extra bits:
 
-- `components/` : For general components not specific to a part of the app. A bit like base classes for view components.
+- `components/` : For generalized custom components used in the view. Like base classes for view elements.
 - `controller/` : For classes implementing the bulk of the logic for operations in the app.
 - `fonts/` : This came with the starter code, guess it's where font files go.
 - `model/` : For classes representing the underlying data models in the app. Mostly dumb structs.
-- `pages/` : For the different pages of the app, and navigation between them. Kind of like dumb structs wrapping view components together.
+- `pages/` : For the different pages of the app, and navigation between them. Like dumb structs wrapping view components together.
 - `view/` : For components that display models, and bind functionality from controllers.
 - `utils.js` : For random utility functions used across parts of the code.
 
@@ -51,3 +51,17 @@ The state affects how the class is displayed.
 For example, a planned workout shows up in the future schedule.
 An active workout is shown in the active workout view.
 A completed workout shows up in the history view or in the past schedule.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
+- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
