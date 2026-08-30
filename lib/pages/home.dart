@@ -1,31 +1,23 @@
 // Global Flutter imports
 import 'package:flutter/material.dart';
 // Import Views of this Page
-import 'package:kratos/view/ProgramListElem.dart';
+import 'package:kratos/view/ProgramList.dart';
 // Import Models
 import 'package:kratos/model/Program.dart';
 
-class MyHomePage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   final List<Program> programs;
 
-  const MyHomePage({super.key, required this.programs});
+  const HomePage({super.key, required this.programs});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState(programs);
+  State<HomePage> createState() => _HomePageState(programs);
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   final List<Program> programs;
 
-  _MyHomePageState(this.programs);
-
-  void _addProgram() {
-    setState(() {
-      programs.add(
-        Program("New Program ${programs.length}", [])
-      );
-    });
-  }
+  _HomePageState(this.programs);
 
   @override
   Widget build(BuildContext context) {
@@ -38,19 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
         )
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: .center,
-          crossAxisAlignment: .center,
-          children: [
-            for (final program in programs)
-              Row(
-                spacing: 5.0,
-                children: [
-                  ProgramListElem(program)
-                ],
-              )
-          ],
-        ),
+        child: ProgramList(programs:programs)
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _addProgram,

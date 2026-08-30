@@ -24,7 +24,7 @@ class Kratos extends StatelessWidget {
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.red),
       ),
-      home: MyHomePage(programs: [active_program]),
+      home: HomePage(programs: [active_program]),
     );
   }
 }
