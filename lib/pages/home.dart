@@ -21,12 +21,25 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    void _addProgram() {
+      setState(() {
+        programs.add(
+          Program(
+            "New Program ${programs.length}",
+            blocks:[])
+        );
+      });
+    }
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         title: Align(
           alignment: .center,
-          child: Text("Kratos"),
+          child: Text(
+            "Kratos",
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
         )
       ),
       body: Center(

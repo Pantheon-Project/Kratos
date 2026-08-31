@@ -10,7 +10,10 @@ void main() {
 }
 
 class Kratos extends StatelessWidget {
-  static const Program DEFAULT_PROGRAM = Program("Main Program", []);
+  static const Program DEFAULT_PROGRAM = Program(
+    "Default Program",
+    blocks:[]
+  );
 
   final Program active_program = DEFAULT_PROGRAM;
 
